@@ -1,0 +1,110 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+% to build: $ pdflatex <this file>
+
+\documentclass[11pt,a4paper,russian]{moderncv}       
+\usepackage[T2A]{fontenc} 
+\usepackage[utf8]{inputenc} 
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvicons{awesome}
+
+\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+%
+%c C plus plus
+\def\cplusplus{C\raisebox{0.4ex}{\tiny\textbf{++}}}
+\def\myplus{\raisebox{0.5ex}{\tiny\textbf{+}}}
+
+%sensitive info
+\def\myphone{7 (961) 41-30-348}
+\def\myemail{ueberaccelerate@gmail.com}
+
+% personal data
+\name{Вадим}{Субоч}
+\title{Программист}                               % optional, remove / comment the line if not wanted
+\phone[mobile]{\myplus\myphone}                   		% optional, remove / comment the line if not wanted
+\email{\myemail}                               			% optional, remove / comment the line if not wanted
+\social[github]{ueberaccelerate}                  		% optional, remove / comment the line if not wanted
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Опыт}
+\cventry{2020--настоящее}{Старший программист}{Itmagiclab}{Таганрог}{}
+{
+Работаю на комманду Neurotech. Пишу приложения BrainBit, Calibri для iOS.\newline{} \cplusplus{}, Objective C, Swift для MacOS. 
+\begin{itemize}
+\item Реализация приложения \href{https://apps.apple.com/us/app/brainbit-app/id1510548623}{\textit{BrainBit}} для iOS.
+\item Реализация приложения \href{https://apps.apple.com/ru/app/motion-assistant/id1269581635}{\textit{Calibri}} для iOS.
+\end{itemize}
+\hfill{ }\newline{}
+}
+
+\cventry{2018--2020}{Старший программист}{TechRound}{Таганрог}{}
+{
+Работал на команду, которая разрабатывает и предоставляет программный \newline{} интерфейс API для медицинский приборов.\newline{} \cplusplus{}, Objective C, и Swift, для MacOS. 
+\begin{itemize}
+\item Реализация iOS bluetooth API для neurosdk
+\item Предоставление пользовательского APIs для конечных пользователей
+\item Поддержка команд 
+\end{itemize}
+\hfill{ }\newline{}
+}
+
+\cventry{2016--2017}{Программист}{TechRound}{Таганрог}{}
+{
+Руководитель команды, которая осуществляет  рефакторинг и\newline{} сопровождение мобильных игр от Electronic Arts для iOS\newline{} \textit{The Sims 3 World Advetures}, \textit{NFS Most Wanted},\newline{} \textit{SCRABBLE}.\newline{} \cplusplus{} и Objective C для MacOS.\newline{}
+\begin{itemize}
+\item Управлял командой из 2-3 разработчиков.
+\item Реазлизация новых фич
+\item Обновление старой системы отрисовки
+\end{itemize}
+}
+
+\cventry{2015--2016}{Младший Программист}{TechRound}{Таганрог}{}
+{
+Мастер на все руки: gameplay, systems, tools, UI, networking, localization, audio.\newline{}
+}
+\cventry{2015--2016}{Младший Программист}{Face Detection Odroid XU4/TechRound}{Таганрог}{}
+{
+Написал библиотеку распознования лиц и плагин для gstreamer, чтобы\newline{} создать систему, где передается потокове видео клиентам по сети.\newline{}
+\cplusplus{} для Odroid XU4.\newline{}
+\begin{itemize}
+\item написание мелких скриптов, инструментов
+\end{itemize}
+}
+
+
+\section{Прочие навыки}
+\cvitemwithcomment{Expert}{\cplusplus, Git, CMake}{}
+\cvitemwithcomment{Intermediate}{Unix, Python, Swift, Objective C, OpenCL, OpenCV}{}
+
+\section{Образование}
+\cventry{2015--2017}{Магистратура Программная инженерия}{}{}{}{Институт Компьютерных Технологий и Информационной Безопасность,\newline{} Южный Федеральный Университет}  % arguments 3 to 6 can be left empty
+\cventry{2011--2015}{Бакалавриат Информационные технологии в образовании}{}{}{}{Институт Компьютерных Технологий и Информационной Безопасность,\newline{} Южный Федеральный Университет}  % arguments 3 to 6 can be left empty
+%\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+%\cventry{2011--2015}{BA Software Technology for Learning }{}{}{}{Institute of Computer Technologies and Information Security, Southern Federal University}
+
+\clearpage
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
